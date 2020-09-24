@@ -38,6 +38,22 @@ int main() {
   // TODO write your code here
   // =========== START =========
 
+  // Print out X
+  std::cout << "x: {" << x[0];
+  for (int i = 1; i < x.size(); i++){
+  	std::cout << ", " << x[i];
+  }
+  std::cout << "}" << std::endl;
+
+  // Print out W
+  std::cout << "w: {" << w[0];
+  for (int i = 1; i < w.size(); i++){
+  	std::cout << ", " << w[i];
+  }
+  std::cout << "}" << std::endl;
+
+
+
 
 
 
