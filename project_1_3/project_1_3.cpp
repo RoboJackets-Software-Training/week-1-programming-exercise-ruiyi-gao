@@ -52,9 +52,29 @@ int main() {
   }
   std::cout << "}" << std::endl;
 
+  w_middle = (w.size() - 1)/2;
 
+  for (int i = 0; i < x.size(); i++){
+  	double sum = 0;
+  	for (int j = 0; j < w.size(); j++){
+  		int index = i - w_middle + j;
+  		if (index >= 0 && index < x.size()){
+  			sum += x[index]*w[j];
+  		} else if (!pack_with_zeros && w_middle < 0){
+  			sum += x[0] * w[j];
+  		} else if (!pack_with_zeros && w_middle > x.size()){
+  			sum += x[x.size()-1] * w[j];
+  		}
+  	}
+  	y.push_back(sum);
+  }
 
-
+  //Print out y
+  std::cout << "{" << y[0];
+  for(int i = 1; i < y.size(); i++) {
+    std::cout << ", " << y[i];
+  }
+  std::cout << "}" << std::endl;
 
 
   // =========== END ===========
