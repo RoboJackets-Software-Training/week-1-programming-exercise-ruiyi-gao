@@ -1,3 +1,6 @@
-int main() {
-    // TODO: Make this program print "Hello, world!" to the console.
+#include <iostream>
+
+int main(){
+	std::cout << "Hello, world!" << std::endl;
 }
+
